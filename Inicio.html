@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analizador lexico</title>
+    <link rel="stylesheet" href="css/InicioStyle.css">
+</head>
+
+<body>
+
+
+    <form name="myForm" id="inputForm" class="analizador">
+
+        
+
+        <h1 class="analizador_titulo">Analizador Lexico</h1>
+
+        <input name="myInput" type="file" class="analizador_input" id="entradaTexto">
+
+        <!-- <input type="text" class="analizador_input" id="entradaTexto"> -->
+
+        <label for="" class="analizador_label" id="ingreso">Ingrese palabra</label>
+
+        <input type="button" value="Analizar" id="btnAnalizar" onclick="analizarPalabra()">
+        <label for="" class="analizador_label" id="lblErrores">Errores:</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaErrores" rows="30" cols="20"></textarea>
+        <label for="" class="analizador_label" id="lblTokens">Tokens validos:</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaTokens" rows="30" cols="20"></textarea>
+
+    </form>
+
+
+    <script type="text/javascript" src="js/LecturaArchivo.js"></script>
+</body>
+
+</html>
