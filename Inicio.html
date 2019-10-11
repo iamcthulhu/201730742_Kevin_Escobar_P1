@@ -21,13 +21,20 @@
 
         <!-- <input type="text" class="analizador_input" id="entradaTexto"> -->
 
-        <label for="" class="analizador_label" id="ingreso">Ingrese palabra</label>
+        <label for="" class="analizador_label" id="ingreso">Seleccione el archivo</label>
 
-        <input type="button" value="Analizar" id="btnAnalizar" onclick="analizarPalabra()">
+        <input type="button" value="Siguiente" id="btnAnalizar" onclick="analizarPalabra()">
+
+        
+
         <label for="" class="analizador_label" id="lblErrores">Errores:</label>
-        <textarea class="analizador_textarea" disabled="disabled" id="salidaErrores" rows="30" cols="20"></textarea>
-        <label for="" class="analizador_label" id="lblTokens">Tokens validos:</label>
-        <textarea class="analizador_textarea" disabled="disabled" id="salidaTokens" rows="30" cols="20"></textarea>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaErrores" rows="30" cols="23"></textarea>
+
+        <label for="" class="analizador_label" id="lblTokens">Tokens:</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaTokens" rows="30" cols="23"></textarea>
+
+        <label for="" class="analizador_label" id="lblTexto">Texto analizado:</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaTexto" rows="23" cols="47"></textarea>
 
     </form>
 
