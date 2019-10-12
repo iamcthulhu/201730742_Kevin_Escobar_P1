@@ -1,5 +1,7 @@
 var input = myForm.myInput;
 var reader = new FileReader;
+var todosTokens = [];
+
 
 input.addEventListener('change', onChange);
 
@@ -23,16 +25,14 @@ function onLoad() {
 
     for (var linea of lineas) {
         lineaActual += 1;
-
+        //Pruebas para escribir cada linea
         console.log(linea)
-
+        //Escibe en el cuadro de texto el texto analizado
         var texto;
         texto = document.getElementById("salidaTexto");
-        texto.value = texto.value + (linea);
-
-        var todosTokens = [];
-
-        analizarLinea(linea, lineaActual, todosTokens);
+        texto.value = texto.value + ("[" + lineaActual + "]" + linea);
+        //Analiza el codigo de cada linea
+        analizarLinea(linea, lineaActual);
 
     }
 
