@@ -8,10 +8,10 @@ body{
 .analizador{
     background-color: rgba(200, 0, 200, 0.10) ;
     
-    width: 1000px;
+    width: 1300px;
     max-width: 100%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 20px;
     box-shadow: 0 0 20px 1px rgba(200, 0, 200, 3);
     position: relative;
@@ -30,7 +30,7 @@ body{
 }
 #entradaTexto{
     position: relative;
-    bottom: 390px;
+    bottom: 280px;
     background-color: rgba(255, 10, 243, 0.1);
     font-weight: bold;
     border-color: blueviolet;
@@ -39,7 +39,7 @@ body{
 #salidaErrores{
     position: relative;
     top: 35px;
-    right: 200px;
+    right: 0px;
     font-weight: bold;
     background-color: rgba(255, 0, 0, 0.10) ;
     border-color: red;
@@ -47,41 +47,41 @@ body{
 }
 #salidaTokens{
     position: relative;
-    top: -483px;
-    right: -590px;
+    top: 35px;
+    right:0px;
     font-weight: bold;
     background-color: rgba(0, 0, 255, 0.10) ;
     border-color: blue;
     color: blue;
 }
-#ingreso{
+/*#ingreso{
     position: relative;
     bottom: 430px;
     right: 200px;
     font-size: 0.5cm;
     font-weight: bold;
     color: blueviolet;
-}
+}*/
 #lblErrores{
     position: relative;
-    bottom: 430px;
-    right: 120px;
+    bottom: -20px;
+    right: -190px;
     font-size: 0.5cm;
     font-weight: bold;
     color: red;
 }
 #lblTokens{
     position: relative;
-    bottom: 430px;
-    right: 150px;
+    bottom: -20px;
+    right: -190px;
     font-size: 0.5cm;
     font-weight: bold;
     color: blue;
 }
 #btnAnalizar{
     position: relative;
-    bottom: 390px;
-    right: 160px;
+    bottom: 265px;
+    /*right: 160px;*/
     font-size: 0.5cm;
     background-color: rgba(0, 255, 0, 0.10);
     color: rgb(0, 255, 0);
@@ -89,16 +89,16 @@ body{
 }
 #lblTexto{
     position: relative;
-    bottom: 850px;
-    right: 320px;
+    bottom: -20px;
+    right: 795px;
     font-size: 0.5cm;
     font-weight: bold;
     color: green;
 }
 #salidaTexto{
     position: relative;
-    top: -483px;
-    right: 460px;
+    bottom: 300px;
+    right: 385px;
     font-weight: bold;
     background-color: rgba(0, 255, 0, 0.1) ;
     border-color: green;

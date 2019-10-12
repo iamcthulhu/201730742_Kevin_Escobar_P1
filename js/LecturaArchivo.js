@@ -31,7 +31,7 @@ function onLoad() {
     var texto;
     texto = document.getElementById("salidaTexto");
 
-    texto.value = texto.value + (lineaActual + linea);
+    texto.value = texto.value + (linea);
 
     //if(linea === passwordBuscar) {
       // Encontraste contraseña

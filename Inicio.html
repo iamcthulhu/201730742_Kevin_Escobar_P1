@@ -5,15 +5,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Analizador lexico</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/InicioStyle.css">
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Analizador Lexico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Automatas.html">Ver automatas<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Perfil.html">Perfil<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 
     <form name="myForm" id="inputForm" class="analizador">
 
-        
+
 
         <h1 class="analizador_titulo">Analizador Lexico</h1>
 
@@ -21,20 +41,20 @@
 
         <!-- <input type="text" class="analizador_input" id="entradaTexto"> -->
 
-        <label for="" class="analizador_label" id="ingreso">Seleccione el archivo</label>
+        <!-- <label for="" class="analizador_label" id="ingreso">Seleccione el archivo</label> -->
 
         <input type="button" value="Siguiente" id="btnAnalizar" onclick="analizarPalabra()">
 
-        
 
-        <label for="" class="analizador_label" id="lblErrores">Errores:</label>
-        <textarea class="analizador_textarea" disabled="disabled" id="salidaErrores" rows="30" cols="23"></textarea>
 
-        <label for="" class="analizador_label" id="lblTokens">Tokens:</label>
-        <textarea class="analizador_textarea" disabled="disabled" id="salidaTokens" rows="30" cols="23"></textarea>
+        <label for="" class="analizador_label" id="lblErrores">Errores</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaErrores" rows="15" cols="23"></textarea>
 
-        <label for="" class="analizador_label" id="lblTexto">Texto analizado:</label>
-        <textarea class="analizador_textarea" disabled="disabled" id="salidaTexto" rows="23" cols="47"></textarea>
+        <label for="" class="analizador_label" id="lblTokens">Tokens</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaTokens" rows="15" cols="23"></textarea>
+
+        <label for="" class="analizador_label" id="lblTexto">Texto analizado</label>
+        <textarea class="analizador_textarea" disabled="disabled" id="salidaTexto" rows="11" cols="45"></textarea>
 
     </form>
 
