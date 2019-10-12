@@ -5,38 +5,38 @@ input.addEventListener('change', onChange);
 
 
 function onChange(event) {
-  var file = event.target.files[0];
-  
-  reader.readAsText(file);
-  
-  reader.onload = onLoad;
-  
+    //En el documento se 
+    var file = event.target.files[0];
+
+    reader.readAsText(file);
+
+    reader.onload = onLoad;
+
 }
 
 function onLoad() {
-  var result = reader.result; // Obtienes el texto
-  //Separa las lineas del archivo
-  var lineas = result.split('\n');
-  
-  
-  // o lineas.forEach(function(linea){ ... })
-  // o lineas.find(function(linea){ return linea == contraseña })
-  var lineaActual = 0;
+    var result = reader.result; //Se obtiene el texto
+    //Separa las lineas del archivo
+    var lineas = result.split('\n');
 
-  for(var linea of lineas) {
-      lineaActual += 1;
+    var lineaActual = 0;
 
-    console.log('[linea]', linea)
+    for (var linea of lineas) {
+        lineaActual += 1;
 
-    var texto;
-    texto = document.getElementById("salidaTexto");
+        console.log('[linea]', linea)
 
-    texto.value = texto.value + (linea);
+        var texto;
+        texto = document.getElementById("salidaTexto");
+        texto.value = texto.value + (linea);
 
-    //if(linea === passwordBuscar) {
-      // Encontraste contraseña
-    //}
-  }
-  
+        analizarLinea(linea, lineaActual);
+
+
+        //if(linea === passwordBuscar) {
+        // Encontraste contraseña
+        //}
+    }
+
 }
 
