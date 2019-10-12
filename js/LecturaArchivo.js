@@ -17,14 +17,14 @@ function onChange(event) {
 function onLoad() {
     var result = reader.result; //Se obtiene el texto
     //Separa las lineas del archivo
-    var lineas = result.split('\n');
+    var lineas = result.split("\n");
 
     var lineaActual = 0;
 
     for (var linea of lineas) {
         lineaActual += 1;
 
-        console.log('[linea]', linea)
+        console.log(linea)
 
         var texto;
         texto = document.getElementById("salidaTexto");
@@ -32,15 +32,8 @@ function onLoad() {
 
         var todosTokens = [];
 
-
-
         analizarLinea(linea, lineaActual, todosTokens);
 
-        
-
-        //if(linea === passwordBuscar) {
-        // Encontraste contraseña
-        //}
     }
 
 }

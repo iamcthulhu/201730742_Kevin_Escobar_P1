@@ -1,6 +1,8 @@
 function analizarLinea(linea, numeroLinea, todosTokens) {
     //Cuenta el numero de columnas
     var numeroColumna = 0;
+
+    var identificador = "";
     //Aqui ingresan las lineas del texto por separado, se verifica que la linea no se vacia
     if (linea !== "") {
         //Se separan las lineas por palabras
@@ -9,17 +11,33 @@ function analizarLinea(linea, numeroLinea, todosTokens) {
         //Se verifica que la palabra no sea vacia
         if (palabra !== "") {
             //Por cada palabra, hacer:
-            numeroColumna +=1;
 
-            if(analizarReservadaBoolean(palabra) !== "ninguno"){
-                var token = new Token(palabra, analizarReservadaBoolean(palabra), numeroLinea, numeroColumna);
-
-            }
 
             console.log(palabra);
 
-            
-            for(var i = 0; i < palabra.length; i++) {
+
+            for (var i = 0; i < palabra.length; i++) {
+
+                numeroColumna += 1;
+
+                if (analizarReservadaBoolean(palabra[i]) != "no") {
+
+                    escribir(palabra[i], analizarReservadaBoolean(palabra[i]), numeroLinea, numeroColumna, "salidaTokens");
+
+                }else if(analizarSigno(palabra[i]) != "no"){
+
+                    escribir(palabra[i], analizarSigno(palabra[i]), numeroLinea, numeroColumna, "salidaTokens");
+
+                }else if(analizarAgrupacion(palabra[i]) != "no"){
+
+                    escribir(palabra[i], analizarAgrupacion(palabra[i]), numeroLinea, numeroColumna, "salidaTokens");
+
+                }else if(analizarOperador(palabra[i]) != "no"){
+
+                    escribir(palabra[i], analizarAgrupacion(palabra[i]), numeroLinea, numeroColumna, "salidaTokens");
+
+                }
+
                 //Se separan los caracteres de cada palabra
                 var caracter = palabra[i].split("");
                 //Se verifica que los caracteres no sean vacios
@@ -27,7 +45,7 @@ function analizarLinea(linea, numeroLinea, todosTokens) {
 
                     console.log(caracter);
 
-    
+
                 } else {
                     return;
                 }
@@ -40,50 +58,17 @@ function analizarLinea(linea, numeroLinea, todosTokens) {
     }
 }
 
-function newFunction() {
-    return "";
+function escribir(palabra, identificador, numeroLinea, numeroColumna, texto) {
+
+    /*var token = new Token(palabra, identificador, numeroLinea, numeroColumna);
+    todosTokens.push(token);*/
+
+    var salida;
+    salida = document.getElementById(texto);
+    salida.value = salida.value + ("   Patron: " + palabra + "\nTipo: " + identificador + "\nNumeroLinea: " + numeroLinea + "\nNumeroColumna: " + numeroColumna);
+
+
 }
 
-var mensaje = function analizarReservadaBoolean(palabra){
-    //Si devuelve ninguno es porque no es palabra reservada ni boolean
-    mensaje = "ninguno";
 
-    //Coomprueba si es alguna palabra reservada o boolean
-    switch(palabra){
-        case "variable":
-            mensaje = "palabra reservada";
-            break;
-            case "entero":
-            mensaje = "palabra reservada";
-            break;
-            case "decimal":
-            mensaje = "palabra reservada";
-            break;
-            case "booleano":
-            mensaje = "palabra reservada";
-            break;
-            case "cadena":
-            mensaje = "palabra reservada";
-            break;
-            case "si":
-            mensaje = "palabra reservada";
-            break;
-            case "sino":
-            mensaje = "palabra reservada";
-            break;
-            case "mientras":
-            mensaje = "palabra reservada";
-            break;
-            case "hacer":
-            mensaje = "palabra reservada";
-            break;
-            case "VERDADERO":
-            mensaje = "boolean";
-            break;
-            case "FALSO":
-            mensaje = "boolean";
-            break;
-    }
 
-    return mensaje;
-}
