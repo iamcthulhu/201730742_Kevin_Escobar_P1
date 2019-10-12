@@ -30,8 +30,13 @@ function onLoad() {
         texto = document.getElementById("salidaTexto");
         texto.value = texto.value + (linea);
 
-        analizarLinea(linea, lineaActual);
+        var todosTokens = [];
 
+
+
+        analizarLinea(linea, lineaActual, todosTokens);
+
+        
 
         //if(linea === passwordBuscar) {
         // Encontraste contraseña

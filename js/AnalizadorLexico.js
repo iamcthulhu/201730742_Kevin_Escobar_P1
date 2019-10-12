@@ -1,4 +1,4 @@
-function analizarLinea(linea, numeroLinea) {
+function analizarLinea(linea, numeroLinea, todosTokens) {
     //Cuenta el numero de columnas
     var numeroColumna = 0;
     //Aqui ingresan las lineas del texto por separado, se verifica que la linea no se vacia
@@ -13,7 +13,7 @@ function analizarLinea(linea, numeroLinea) {
 
             if(analizarReservadaBoolean(palabra) !== "ninguno"){
                 var token = new Token(palabra, analizarReservadaBoolean(palabra), numeroLinea, numeroColumna);
-                
+
             }
 
             console.log(palabra);
